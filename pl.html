@@ -1,91 +1,263 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Experiment 2: CSS Grid + Flexbox</title>
-    <link
-      rel="stylesheet"
-      href="https://public.codepenassets.com/css/reset-2.0.min.css"
-    />
-    <link rel="stylesheet" href="./pl.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshhhhh.exe a cessé de fonctionner</title>
 
-  <body>
-    <body>
-      <main>
-        <header>
-          <h1>Pierre-Louis<br />Art Direction &<br />Photography</h1>
-        </header>
-        <p>
-          Claude Monet (1840-1926) est un peintre francais, figure centrale de
-          l'impressionnisme. Il cherche moins a decrire les formes qu'a saisir
-          la lumiere, l'air et les variations d'un meme motif. De la Seine aux
-          meules, des cathedrales aux nympheas de Giverny, son oeuvre transforme
-          le paysage en experience de couleur et de perception.
-        </p>
-        <address>
-          +33 7 67 67 67 67<br />
-          contact@pierrelouis.net<br />
-          aka. Le Patron<br />
-          42000 Saint-Etienne, France<br /><br />
-          www.pierrelouis.net
-        </address>
-        <h1 class="title1">it</h1>
-        <div class="title2 sit_baseline"><h1>is</h1></div>
-        <h1 class="title3">what</h1>
-        <h1 class="title4">it</h1>
-        <div class="title5 sit_baseline"><h1>is</h1></div>
-        <img
-          class="img1"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Water%20Lilies%20-%20Setting%20Sun%20-%20Google%20Art%20Project.jpg?width=1800"
-          alt="Claude Monet, The Water Lilies - Setting Sun"
-        />
-        <img
-          class="img2"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20Impression%2C%20soleil%20levant.jpg?width=1000"
-          alt="Claude Monet, Impression, soleil levant"
-        />
-        <img
-          class="img3"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_011.jpg?width=1200"
-          alt="Claude Monet, Woman with a Parasol"
-        />
-        <img
-          class="img4"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20The%20Japanese%20Footbridge%2C%201899%2C%20NGA%2074796.jpg?width=1200"
-          alt="Claude Monet, The Japanese Footbridge"
-        />
-        <img
-          class="img5"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Poppy%20Field%20-%20Google%20Art%20Project.jpg?width=1000"
-          alt="Claude Monet, Poppy Field"
-        />
-        <img
-          class="img6"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Jardin%20%C3%A0%20Sainte-Adresse.jpg?width=1400"
-          alt="Claude Monet, Jardin à Sainte-Adresse"
-        />
-        <img
-          class="img7"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Rouen%20Cathedral%2C%20West%20Fa%C3%A7ade%2C%20Sunlight%20-%20Google%20Art%20Project.jpg?width=1400"
-          alt="Claude Monet, Rouen Cathedral, West Facade, Sunlight"
-        />
-        <img
-          class="img8"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20Houses%20of%20Parliament.jpg?width=900"
-          alt="Claude Monet, Houses of Parliament"
-        />
-        <img
-          class="img9"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Cliff%20Walk%20at%20Pourville%20-%20Google%20Art%20Project.jpg?width=1000"
-          alt="Claude Monet, Cliff Walk at Pourville"
-        />
-        <img
-          class="img10"
-          src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Haystacks%2C%20end%20of%20Summer%20-%20Google%20Art%20Project.jpg?width=1000"
-          alt="Claude Monet, Haystacks, end of Summer"
-        />
-      </main>
-    </body>
-  </body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      background: linear-gradient(45deg, hotpink, yellow, cyan, lime);
+      background-size: 400% 400%;
+      animation: fondQuiBouge 6s infinite alternate;
+      overflow-x: hidden;
+      text-align: center;
+      color: #3b003b;
+    }
+
+    @keyframes fondQuiBouge {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    header {
+      padding: 30px 20px;
+      background: rgba(255,255,255,0.5);
+      border-bottom: 8px dotted magenta;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: secousse 0.3s infinite alternate;
+      text-shadow: 3px 3px 0 yellow, -3px -3px 0 cyan;
+    }
+
+    @keyframes secousse {
+      from { transform: rotate(-2deg) scale(1); }
+      to { transform: rotate(2deg) scale(1.03); }
+    }
+
+    .sous-titre {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.75);
+      border: 5px dashed #ff00aa;
+      border-radius: 25px;
+      padding: 25px;
+      margin: 25px 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      transform: rotate(-1deg);
+    }
+
+    .box:nth-child(even) {
+      transform: rotate(1deg);
+    }
+
+    .important {
+      font-size: 2rem;
+      color: red;
+      font-weight: bold;
+      background: yellow;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px;
+      animation: clignote 0.6s infinite;
+    }
+
+    @keyframes clignote {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    ul {
+      list-style: "💀 ";
+      text-align: left;
+      max-width: 500px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+    }
+
+    .photo-fake {
+      font-size: 6rem;
+      margin: 20px 0;
+      animation: tourne 4s linear infinite;
+    }
+
+    @keyframes tourne {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    button {
+      background: #ff00aa;
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      padding: 15px 25px;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 15px;
+      box-shadow: 0 8px 0 #b00077;
+      transition: transform 0.1s;
+    }
+
+    button:active {
+      transform: translateY(4px);
+      box-shadow: 0 4px 0 #b00077;
+    }
+
+    #messageSurprise {
+      margin-top: 25px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #7a004f;
+      min-height: 50px;
+    }
+
+    .marquee {
+      background: black;
+      color: lime;
+      padding: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollTexte 10s linear infinite;
+    }
+
+    @keyframes scrollTexte {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 1rem;
+      color: #5a005a;
+      font-weight: bold;
+    }
+
+    .rain {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      animation: fall linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee">
+    <span>⚠️ ALERTE CRINGE ⚠️ Joshhhhh est actuellement en phase maximale de gêne intersidérale ⚠️</span>
+  </div>
+
+  <header>
+    <h1>Bienvenue sur JoshhhhhLand</h1>
+    <p class="sous-titre">Le seul site officiellement approuvé par personne.</p>
+  </header>
+
+  <main>
+    <div class="box">
+      <p class="important">DOSSIER TOP SECRET SUR JOSHHHH</p>
+      <p>Après des années d’enquête, nous pouvons enfin révéler la vérité.</p>
+      <div class="photo-fake">🧍‍♂️✨</div>
+      <p><strong>Nom de code :</strong> Joshhhhh</p>
+      <p><strong>Niveau de gêne :</strong> 9999/10</p>
+      <p><strong>Profession :</strong> créateur de moments gênants involontaires</p>
+    </div>
+
+    <div class="box">
+      <h2>Faits 100% pas du tout nécessaires</h2>
+      <ul>
+        <li>Joshhhhh entre probablement en conversation avec les murs.</li>
+        <li>Il a peut-être déjà dit “euhhh” 47 fois dans la même phrase.</li>
+        <li>Son aura ressemble à une playlist aléatoire de malaise.</li>
+        <li>Il pourrait être le PDG mondial du cringe.</li>
+        <li>Le regarder trop longtemps peut provoquer un fou rire incontrôlé.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Test officiel</h2>
+      <p>Appuie sur le bouton pour découvrir la vérité sur Joshhhhh.</p>
+      <button onclick="surpriseJosh()">RÉVÉLER LE DOSSIER</button>
+      <div id="messageSurprise"></div>
+    </div>
+
+    <div class="box">
+      <h2>Classement officiel de Joshhhhh</h2>
+      <p>🏆 Champion régional de la gêne</p>
+      <p>🥈 Vice-champion du regard bizarre</p>
+      <p>🥉 Médaillé d’or du moment awkward</p>
+    </div>
+  </main>
+
+  <footer>
+    Site inutile mais essentiel — Édition spéciale Joshhhhh 💖
+  </footer>
+
+  <script>
+    const messages = [
+      "🚨 Joshhhhh a été détecté en train d'exister avec intensité.",
+      "💀 Niveau de gêne critique atteint.",
+      "🫣 Joshhhhh vient de dire un truc qu'il regrettera à 3h du matin.",
+      "✨ Le charisme de Joshhhhh est actuellement en maintenance.",
+      "📢 Joshhhhh est officiellement trop bizarre pour être ignoré.",
+      "🛸 Les extraterrestres ont refusé d'assumer Joshhhhh.",
+      "🎀 Joshhhhh est une expérience sociale qui a dégénéré."
+    ];
+
+    function surpriseJosh() {
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("messageSurprise").textContent = msg;
+      lancerPluie();
+      alert("ATTENTION : Joshhhhh vient d'activer le mode gêne maximale.");
+    }
+
+    function lancerPluie() {
+      for (let i = 0; i < 20; i++) {
+        const emoji = document.createElement("div");
+        emoji.className = "rain";
+        emoji.textContent = ["💀", "✨", "🫣", "🤡", "💖", "🚨"][Math.floor(Math.random() * 6)];
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        emoji.style.opacity = Math.random();
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+          emoji.remove();
+        }, 5000);
+      }
+    }
+  </script>
+
+</body>
 </html>
