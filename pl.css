@@ -5,8 +5,8 @@ main {
   grid-template-rows: repeat(9, max-content);
   grid-gap: 1rem 1rem;
   font-family: helvetica, arial, sans-serif;
-/*   font-size: 16px; */
-  font-size: .95vw;
+  /*   font-size: 16px; */
+  font-size: 0.95vw;
   font-weight: bold;
   margin: 2rem;
 }
@@ -16,13 +16,13 @@ main {
 }
 
 main h1 {
-/*   font-size: 16rem; */
+  /*   font-size: 16rem; */
   font-size: 15vw;
   text-align: center;
 }
 
 header h1 {
-/*   font-size: 3rem; */
+  /*   font-size: 3rem; */
   font-size: 2.85vw;
   text-align: left;
 }
@@ -60,7 +60,7 @@ header {
 }
 
 .img3 {
-	grid-area: 3 / 1 / 5 / 3;
+  grid-area: 3 / 1 / 5 / 3;
   height: calc((var(--cell) * 2) + 1rem);
 }
 
@@ -123,13 +123,13 @@ address {
 
 @media (max-width: 1080px) {
   main {
-      --cell: calc((100vw - 8rem) / 5);
-      grid-template-columns: repeat(5, 1fr);
+    --cell: calc((100vw - 8rem) / 5);
+    grid-template-columns: repeat(5, 1fr);
   }
   header {
-  grid-area: 1/ 4 / 2 / 6;
+    grid-area: 1/ 4 / 2 / 6;
   }
-  
+
   .title2 {
     grid-area: 2 / 4 / 3 / 5;
     align-self: end;
@@ -138,45 +138,45 @@ address {
   .img2 {
     grid-area: 2 / 4 / 3 / 5;
   }
-  
+
   .img4 {
     grid-area: 3 / 3 / 4 / 4;
     height: var(--cell);
   }
-  
-  .title2  {
+
+  .title2 {
     grid-area: 3 / 4 / 4 / 5;
   }
-  
+
   .img5 {
     grid-area: 4 / 3 / 5 / 4;
   }
-  
+
   .img6 {
     grid-area: 4 / 4 / 6 / 6;
   }
-  
+
   .title3 {
     grid-area: 5 / 1 / 6 / 3;
   }
-  
+
   .title4 {
     grid-area: 6 / 4 / 7 / 5;
   }
-  
+
   .img8 {
     grid-area: 6 / 1 / 7 / 2;
   }
-  
+
   main p {
     columns: 3;
     column-gap: 8px;
     grid-area: 9 / 1 / 10 / 7;
   }
-  address, main p {
-    font-size: .7rem;
+  address,
+  main p {
+    font-size: 0.7rem;
   }
-  
 }
 
 @media (max-width: 880px) {
@@ -186,7 +186,11 @@ address {
     flex-direction: column;
   }
 
-  .img1, .img3, .img4, .img6, .img7 {
+  .img1,
+  .img3,
+  .img4,
+  .img6,
+  .img7 {
     height: var(--cell);
   }
   main p {
@@ -194,43 +198,51 @@ address {
     column-gap: 0;
     font-size: 16px;
   }
-  
+
   header {
   }
-  
+
   .title1 {
     order: 1;
   }
-  
+
   .title2 {
     order: 2;
   }
-  
-  .img1, .img2 {
+
+  .img1,
+  .img2 {
     order: 3;
   }
-  
-   .title3, .title4 {
+
+  .title3,
+  .title4 {
     order: 5;
   }
-  
-  .title2, .img3, .img4 {
+
+  .title2,
+  .img3,
+  .img4 {
     order: 4;
   }
-  
-  .img5, .img6 {
+
+  .img5,
+  .img6 {
     order: 6;
   }
-  
+
   .title5 {
-    order: 7
+    order: 7;
   }
-  
-  .img8, .img9, .img10 {
+
+  .img8,
+  .img9,
+  .img10 {
     order: 8;
   }
-  
-  main p,  address {
+
+  main p,
+  address {
     order: 9;
   }
 }
