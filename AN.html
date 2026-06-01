@@ -1,303 +1,664 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Les impacts sociaux et économiques de la consommation de légumineuses dans les sociétés hispaniques (1830-1930)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphonse Mucha — Art nouveau et symbole</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:wght@400;600;700&display=swap');
 
-<style>
-    body{
-        margin:0;
-        padding:0;
-        background:#f5f2eb;
-        font-family: "Georgia", serif;
-        color:#1f1f1f;
-        line-height:1.9;
+    :root {
+      --black: #130f0a;
+      --ink: #21170f;
+      --gold: #d1a44c;
+      --ivory: #f4e6c7;
+      --green: #6f8060;
+      --red: #9d5046;
+      --shadow: rgba(0, 0, 0, 0.42);
     }
 
-    header{
-        background:#3d2417;
-        color:white;
-        padding:70px 40px;
-        text-align:center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    header h1{
-        font-size:3em;
-        margin-bottom:20px;
-        letter-spacing:1px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    header p{
-        font-size:1.1em;
-        font-style:italic;
-        opacity:0.9;
+    body {
+      font-family: 'Playfair Display', serif;
+      color: var(--ivory);
+      background: var(--black);
+      overflow-x: hidden;
     }
 
-    main{
-        max-width:1100px;
-        margin:auto;
-        background:white;
-        padding:60px;
-        box-shadow:0 0 20px rgba(0,0,0,0.12);
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 20;
+      background:
+        radial-gradient(circle at center, transparent 0 52%, rgba(0,0,0,0.16) 100%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 4px);
+      mix-blend-mode: soft-light;
     }
 
-    h2{
-        color:#5c3521;
-        margin-top:60px;
-        border-left:8px solid #8a5b3f;
-        padding-left:15px;
-        font-size:2em;
+    .nav {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 30;
+      width: min(940px, calc(100% - 36px));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border: 1px solid rgba(209,164,76,0.38);
+      border-radius: 999px;
+      background: rgba(19, 15, 10, 0.58);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 14px 50px rgba(0,0,0,0.28);
     }
 
-    h3{
-        color:#6b442f;
-        margin-top:35px;
-        font-size:1.4em;
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      letter-spacing: .18em;
+      color: var(--gold);
+      font-size: .82rem;
+      text-transform: uppercase;
     }
 
-    p{
-        text-align:justify;
-        margin-top:18px;
-        font-size:1.05em;
+    .nav a {
+      color: var(--ivory);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: .95rem;
+      opacity: .82;
+      transition: color .25s ease, opacity .25s ease;
     }
 
-    .citation{
-        background:#efe5d7;
-        border-left:6px solid #7b4b2a;
-        padding:25px;
-        margin:35px 0;
-        font-style:italic;
+    .nav a:hover {
+      color: var(--gold);
+      opacity: 1;
     }
 
-    table{
-        width:100%;
-        border-collapse:collapse;
-        margin-top:30px;
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      padding: 120px 5vw 70px;
     }
 
-    th, td{
-        border:1px solid #999;
-        padding:15px;
-        text-align:left;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -8%;
+      z-index: -3;
+      background: url('https://commons.wikimedia.org/wiki/Special:FilePath/Alphonse%20Mucha%20-%20Zodiac.jpg') center right/cover no-repeat;
+      filter: saturate(0.9) contrast(1.1) brightness(0.62);
+      transform: scale(1.07);
+      animation: slowZoom 24s ease-in-out infinite alternate;
     }
 
-    th{
-        background:#ddd0c1;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(19,15,10,0.96) 0%, rgba(19,15,10,0.80) 37%, rgba(19,15,10,0.28) 72%, rgba(19,15,10,0.72) 100%),
+        linear-gradient(0deg, rgba(19,15,10,0.90) 0%, transparent 28%, rgba(19,15,10,0.30) 100%);
     }
 
-    .note{
-        background:#f8f4ef;
-        padding:20px;
-        border:1px solid #d6c7b5;
-        margin-top:30px;
+    .hero-content {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: block;
     }
 
-    footer{
-        background:#3d2417;
-        color:white;
-        text-align:center;
-        padding:40px;
-        margin-top:60px;
+    .eyebrow {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 24px;
     }
 
-    .small{
-        font-size:0.92em;
-        opacity:0.85;
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3.5rem, 9.2vw, 8.9rem);
+      line-height: .88;
+      text-transform: uppercase;
+      text-shadow: 0 18px 50px rgba(0,0,0,.55);
+      max-width: 860px;
+      padding-bottom: .08em;
     }
-</style>
+
+    h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--gold);
+      text-stroke: 1px var(--gold);
+      padding-bottom: .04em;
+    }
+
+    .bio-intro {
+      position: relative;
+      padding: 92px 5vw 42px;
+      background:
+        radial-gradient(circle at 15% 30%, rgba(209,164,76,.12), transparent 32%),
+        linear-gradient(180deg, #130f0a 0%, #1c120b 100%);
+    }
+
+    .bio-card {
+      width: min(880px, 100%);
+      margin: 0 auto;
+      padding: 30px 34px;
+      border: 1px solid rgba(209,164,76,0.38);
+      border-radius: 26px;
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 26px 70px rgba(0,0,0,.28);
+    }
+
+    .bio-card strong {
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: .9rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .bio-card p {
+      color: rgba(244,230,199,.88);
+      font-size: 1.18rem;
+      line-height: 1.68;
+    }
+
+    .gallery {
+      position: relative;
+      padding: 110px 5vw;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(157,80,70,.28), transparent 34%),
+        radial-gradient(circle at 80% 20%, rgba(111,128,96,.22), transparent 30%),
+        linear-gradient(180deg, #130f0a 0%, #26190f 42%, #120d08 100%);
+    }
+
+    .section-title {
+      width: min(1100px, 100%);
+      margin: 0 auto 54px;
+      display: grid;
+      grid-template-columns: .7fr 1fr;
+      gap: 32px;
+      align-items: end;
+    }
+
+    .section-title h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.4rem, 6vw, 5.6rem);
+      line-height: .95;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .section-title p {
+      max-width: 680px;
+      font-size: 1.18rem;
+      line-height: 1.76;
+      color: rgba(244,230,199,.84);
+    }
+
+    .wall {
+      width: min(1220px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+    }
+
+    .art-card {
+      position: relative;
+      min-height: 540px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: #21170f;
+      border: 1px solid rgba(209,164,76,.35);
+      box-shadow: 0 28px 70px rgba(0,0,0,.45);
+      transform-style: preserve-3d;
+      transition: transform .5s ease, box-shadow .5s ease, border-color .5s ease;
+    }
+
+    .art-card:hover {
+      transform: translateY(-12px) scale(1.01);
+      border-color: rgba(209,164,76,.8);
+      box-shadow: 0 40px 95px rgba(0,0,0,.62);
+    }
+
+    .art-card.large { grid-column: span 7; }
+    .art-card.medium { grid-column: span 5; }
+    .art-card.wide { grid-column: span 12; min-height: 660px; }
+    .art-card.small { grid-column: span 4; min-height: 520px; }
+
+    .art-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(.93) contrast(1.04) brightness(.86);
+      transform: scale(1.02);
+      transition: transform .9s ease, filter .9s ease;
+    }
+
+    .art-card:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.05) contrast(1.06) brightness(.96);
+    }
+
+    .art-card.contain img {
+      object-fit: contain;
+      padding: 28px;
+      background: radial-gradient(circle, #3a2817, #130f0a 70%);
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 28px;
+      background: linear-gradient(0deg, rgba(0,0,0,.90), rgba(0,0,0,.62), transparent);
+    }
+
+    .caption h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: clamp(1.25rem, 2.4vw, 2rem);
+      margin-bottom: 8px;
+    }
+
+    .caption p {
+      max-width: 760px;
+      color: rgba(244,230,199,.88);
+      font-size: 1.05rem;
+      line-height: 1.56;
+    }
+
+    .chapter {
+      min-height: 95vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--black);
+    }
+
+    .chapter.slav-section {
+      grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr);
+      align-items: stretch;
+    }
+
+    .chapter-image {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .chapter-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.76) saturate(.9);
+    }
+
+    .chapter-text {
+      padding: 14vh 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(90deg, rgba(19,15,10,.2), #130f0a 26%),
+        radial-gradient(circle at 60% 30%, rgba(209,164,76,.16), transparent 36%);
+    }
+
+    .chapter-text h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: clamp(2.4rem, 5vw, 5.2rem);
+      line-height: .95;
+      margin-bottom: 30px;
+    }
+
+    .chapter-text p {
+      font-size: 1.24rem;
+      line-height: 1.82;
+      color: rgba(244,230,199,.86);
+      margin-bottom: 24px;
+    }
+
+    .chapter-text-wide {
+      align-items: stretch;
+      justify-content: center;
+      padding: 11vh 5.5vw;
+    }
+
+    .chapter-text-wide h2,
+    .chapter-text-wide p {
+      max-width: none;
+      width: 100%;
+    }
+
+    .chapter-text-wide h2 {
+      max-width: 900px;
+    }
+
+    .chapter-text-wide p {
+      font-size: clamp(1.16rem, 1.55vw, 1.42rem);
+      line-height: 1.88;
+    }
+
+    .bernhardt-art {
+      padding: 0;
+      overflow: hidden;
+      background: #130f0a;
+    }
+
+    .bernhardt-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(.78) saturate(.92);
+      transform: scale(1.01);
+    }
+
+    .full-art {
+      position: relative;
+      min-height: 100vh;
+      height: auto;
+      background:
+        radial-gradient(circle at 50% 45%, rgba(209,164,76,.14), transparent 38%),
+        linear-gradient(180deg, #21150c 0%, #090604 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 42px;
+      overflow: visible;
+    }
+
+    .full-art img {
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 84px);
+      object-fit: contain;
+      object-position: center center;
+      filter: brightness(.94) saturate(.98);
+      box-shadow: 0 24px 80px rgba(0,0,0,.5);
+      border: 1px solid rgba(209,164,76,.28);
+      background: #130f0a;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      width: min(1220px, 100%);
+      margin: 60px auto 0;
+    }
+
+    .fact {
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(209,164,76,.32);
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 18px 50px rgba(0,0,0,.24);
+    }
+
+    .fact h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .fact p {
+      color: rgba(244,230,199,.84);
+      line-height: 1.58;
+      font-size: 1.05rem;
+    }
+
+    .quote {
+      margin-top: 30px;
+      padding: 26px;
+      border-left: 3px solid var(--gold);
+      background: rgba(255,255,255,.045);
+      color: rgba(244,230,199,.94);
+      font-size: 1.34rem;
+      line-height: 1.58;
+    }
+
+    footer {
+      padding: 54px 22px;
+      text-align: center;
+      background: #0e0a06;
+      border-top: 1px solid rgba(209,164,76,.28);
+      color: rgba(244,230,199,.66);
+    }
+
+    footer strong {
+      display: block;
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    @keyframes slowZoom {
+      from { transform: scale(1.07) translate3d(0,0,0); }
+      to { transform: scale(1.15) translate3d(-1.8%, 1.4%, 0); }
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        top: 14px;
+        border-radius: 22px;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 118px;
+        align-items: end;
+      }
+
+      .hero-content,
+      .section-title,
+      .chapter,
+      .chapter.slav-section {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 17vw, 6.4rem);
+      }
+
+      .hero-note {
+        transform: none;
+        max-width: 100%;
+      }
+
+      .art-card.large,
+      .art-card.medium,
+      .art-card.wide,
+      .art-card.small {
+        grid-column: span 12;
+        min-height: 520px;
+      }
+
+      .chapter-image {
+        position: relative;
+        height: 72vh;
+      }
+
+      .bernhardt-art {
+        height: 72vh;
+        min-height: 540px;
+        padding: 0;
+      }
+
+      .bernhardt-art img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .full-art {
+        min-height: auto;
+        height: auto;
+        padding: 24px;
+      }
+
+      .full-art img {
+        max-height: none;
+      }
+
+      .chapter-text {
+        padding: 70px 7vw;
+      }
+
+      .fact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-    <h1>Les impacts sociaux et économiques de la consommation de légumineuses dans les sociétés hispaniques (1830-1930)</h1>
-    <p>Étude historique des structures alimentaires, agricoles et sociales dans le monde hispanique</p>
-</header>
-
-<main>
-
-<section>
-    <h2>Introduction</h2>
-
-    <p>
-        Entre 1830 et 1930, les sociétés hispaniques connaissent d’importantes transformations politiques, économiques et démographiques. Les indépendances latino-américaines, les réformes agraires espagnoles, l’essor des échanges commerciaux transatlantiques et les premières phases d’industrialisation modifient profondément les structures de production et les pratiques alimentaires.
-    </p>
-
-    <p>
-        Dans ce contexte, les légumineuses — principalement les haricots, les pois chiches, les lentilles et les fèves — occupent une place centrale dans l’alimentation populaire. Loin de constituer un simple complément nutritionnel, elles deviennent un élément structurant des économies rurales et des hiérarchies sociales.
-    </p>
-
-    <div class="citation">
-        « Les légumineuses constituent l’un des fondements invisibles de la stabilité alimentaire dans les sociétés hispaniques du XIXe siècle. »
+  <nav class="nav">
+    <div class="logo">Alphonse Mucha</div>
+    <div class="links">
+      <a href="#gallery">Œuvres</a>>
+      <a href="#bernhardt">Bernhardt</a>
+     <a href="#slav-epic">L’Épopée slave</a>a>
     </div>
+  </nav>
 
-    <p>
-        L’étude de leur consommation permet ainsi d’analyser les rapports entre agriculture, pauvreté, organisation du travail et construction des identités culturelles dans l’espace hispanique.
-    </p>
-</section>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="title-block">
+      <p class="eyebrow">Moravie • Paris • Prague</p>p>
+        <h1>Alphonse <span>Mucha</span></h1>
+      </div>
 
-<section>
-    <h2>I. Les légumineuses comme pilier alimentaire des classes populaires</h2>
-
-    <h3>1. Une alimentation adaptée aux contraintes économiques</h3>
-
-    <p>
-        Les légumineuses présentent plusieurs avantages déterminants pour les populations rurales du XIXe siècle : faible coût de production, excellente conservation et forte densité nutritionnelle. Dans l’Espagne intérieure, notamment en Castille et en Estrémadure, les pois chiches et les lentilles constituent une part essentielle du régime paysan.
-    </p>
-
-    <p>
-        En Amérique latine, les haricots occupent une fonction comparable. Au Mexique, l’association traditionnelle du maïs et du haricot permet d’assurer un apport relativement équilibré en protéines végétales malgré une faible consommation de viande.
-    </p>
-
-    <p>
-        Cette dépendance alimentaire révèle également la fragilité économique des populations rurales. Les légumineuses deviennent un instrument de survie dans des sociétés marquées par l’instabilité des récoltes et les crises agricoles récurrentes.
-    </p>
-
-    <h3>2. Une alimentation du travail</h3>
-
-    <p>
-        Les plats à base de haricots, de lentilles ou de pois chiches sont particulièrement présents parmi les travailleurs agricoles et ouvriers. Leur richesse énergétique permet de soutenir un effort physique prolongé dans les mines, les champs ou les ateliers manufacturiers.
-    </p>
-
-    <p>
-        Les sources médicales et hygiénistes de la fin du XIXe siècle considèrent fréquemment les légumineuses comme des aliments « robustes », adaptés aux besoins des classes laborieuses.
-    </p>
-</section>
-
-<section>
-    <h2>II. Les impacts économiques des cultures légumineuses</h2>
-
-    <h3>1. Une fonction agronomique essentielle</h3>
-
-    <p>
-        Les légumineuses jouent un rôle fondamental dans les systèmes agricoles traditionnels grâce à leur capacité de fixation de l’azote atmosphérique. Cette propriété améliore naturellement la fertilité des sols et réduit l’épuisement des terres cultivées.
-    </p>
-
-    <p>
-        Les rotations associant céréales et légumineuses deviennent progressivement courantes dans plusieurs régions espagnoles au cours du XIXe siècle.
-    </p>
-
-    <div class="note">
-        Les systèmes de polyculture mésoaméricains intégrant maïs, haricots et courges présentent une remarquable stabilité écologique et une forte résilience face aux aléas climatiques.
     </div>
+  </header>
 
-    <h3>2. L’intégration aux circuits commerciaux</h3>
+  <main>
+    <section class="bio-intro">
+      <div class="bio-card">
+        <strong>1860–1939</strong>
+        <p>
+        Né Alfons Maria Mucha à Ivančice, en Moravie, Mucha devient célèbre à Paris grâce au théâtre et à l’affiche publicitaire. Pourtant, il ne s’est jamais considéré seulement comme un artiste décoratif : plus tard, il consacre une énergie immense à la peinture historique, notamment à <em>L’Épopée slave</em>, qu’il imagine comme une mémoire visuelle des peuples slaves.mémoire visuelle des peuples slaves.
+        </p>
+      </div>
+    </section>
+    <section class="gallery" id="gallery">
+      <h2>L’affiche<br />comme théâtre</h2> <h2>L’affiche<br />comLa percée de Mucha a lieu à Paris dans les années 1890, au moment où le théâtre, la publicité et l’impression lithographique transforment la vie visuelle de la ville. Ses affiches ne sont pas de simples annonces : elles arrêtent le passant. Formats verticaux, poses frontales, auréoles décoratives et lignes maîtrisées transforment l’image commerciale en monument public.ignes maîtrisées transforment l’image commerciale en monument public.
+        </p>
+      </div>
 
-    <p>
-        Entre 1850 et 1930, le développement des infrastructures de transport favorise l’intégration régionale des marchés agricoles. Les centres urbains espagnols dépendent fortement des campagnes productrices de pois chiches et de lentilles.
-    </p>
+      <div class="wall">
+        <article class="art-card large">
+          <img srcalt="Affiche Job par Alphonse Mucha"ki/Special:FilePath/Mucha-job.jpg" alt="Affiche Job par Alphonse Mucha" />
+          <div cCette affiche pour le papier à cigarettes repose sur un paradoxe visuel : la fumée, les cheveux et l’ornement semblent faits de la même matière. Le produit disparaît presque ; ce qui reste, c’est une image hypnotique du désir, du loisir et de la consommation moderne.isparaît presque ; ce qui reste, c’est une image hypnotique du désir, du loisir et de la consommation moderne.
+            </p>
+          </div>
+        </article>
 
-    <p>
-        Au Mexique, l’expansion du réseau ferroviaire sous le régime de Porfirio Díaz facilite la circulation des haricots vers les grandes villes industrielles.
-    </p>
+        <article class="art-card mediumalt="Zodiac par Alphonse Mucha"/commons.wikimedia.org/wiki/Special:FilePath/Alphonse%20Mucha%20-%20Zodiac.jpg" alt="Zodiac paConçu à l’origine comme image de calendrier, <em>Zodiac</em> transforme le temps en dLe cadre circulaireculaire évoque à la fois une auréole, un cadran et un bijou, donnant à la figure féminine une présence à la fois moderne et mythique.dre circulaireculaire évoque à la fois une auréole, un cadran et un bijou, donnant à la figure féminine une présence à la fois moderne et mythique.
+            </p>
+          </div>
+        </article>
 
-    <table>
-        <tr>
-            <th>Légumineuse</th>
-            <th>Région dominante</th>
-            <th>Fonction économique principale</th>
-        </tr>
+        <article class=alt="Les Saisons par Alphonse Mucha"<img src="https://commons.wikimedia.org/wiki/SpecialLes Saisons, 189620Mucha%20-%20The%20Seasons%2C%20189Mucha travaille souvent par séries décoratives. Ici, les saisons ne sont pas des paysages, mais des états incarnés : le printemps comme éveil, l’été comme abondance sensuelle, l’automne comme récolte, l’hiver comme silence et retrait. La nature devient un rythme humain.ysages, mais des états incarnés : le printemps comme éveil, l’été comme abondance sensuelle, l’automne comme récolte, l’hiver comme silence et retrait. La nature devient un rythme humain.
+            </p>
+       alt="Le Printemps par Alphonse Mucha"        <article class="art-card small">
+          <img src="https://commons.wikimedia.org/wikLa figure est verticale, délicate, entourée d’une végétation naissante. Mucha évite l’action dramatique : le sens vient de la posture, du contour et de l’environnement décoratif.            <p>
+              La figure est verticale, délicate, entourée d’une végétation naissante. Mucha évite l’action dramatique : le sens vient de la posture, du contour et de l’environnement décoratif.
+   alt="L’Été par Alphonse Mucha"
+        </article>
 
-        <tr>
-            <td>Haricot</td>
-            <td>Mexique et Amérique centrale</td>
-            <td>Alimentation populaire et commerce régional</td>
-        </tr>
+        <article class="art-card small">
+          <img src="https://commLa composition suggère la chaleur par l’immobilité. Le corps est détendu, la palette est chaude, et la végétation environnante donne l’impression que la figure se fond dans la saison.mer</h3>
+            <p>
+              La composition suggère la chaleur par l’immobilité. Le corps est détendu, la palette est chaude, et la végétation environnante donne l’impression que la figure se fond dans alt="L’Automne par Alphonse Mucha"        </div>
+        </article>
 
-        <tr>
-            <td>Pois chiche</td>
-            <td>Andalousie et Castille</td>
-            <td>Culture marchande rurale</td>
-        </tr>
+        <arti<h3>Automne</h3>card small">
+          <img srcL’automne est la figure la plus riche de l’ensemble : fruits, cheveux et drapés forment une surface décorative dense. Mucha associe fertilité, maturité et abondance visuelle.   <div class="caption">
+            <h3>Autumn</h3>
+            <p>
+              L’automne est la figure la plus riche de l’ensemble : fruitsLa ligne avant le réalisme forment une surfacLes femmes de Mucha ne sont pas peintes comme de simples portraits. Leurs contours sont très contrôlés, presque graphiques, ce qui rend l’image lisible de loin, dans l’espace de la rue.act-grid">
+        <article class="fact">
+          <h3>La ligne avanLe décor comme structure      <p>Les femmesLes fleurs, les auréoles et les bordures ne sont pas de simples embellissements. Ils organisent l’image, encadrent le corps et donnent à l’affiche sa stabilité architecturale.n, dans l’espace de la rue.</p>
+        </article>
+        <article cL’art commercial élevé<h3>Le décor comme Ses affiches contribuent à rendre la publicité respectable comme culture visuelle. Une même image peut vendre un produit, décorer un mur et définir un mouvement artistique.et donnent à l’affiche sa stabilité architecturale.</p>
+        </article>
+        <article class="fact">
+          <h3>L’art commercial élevé</h3>
+          <p>Ses affiches contribuent à rendre la publicité respectable comme culture visuelle. Une même image peualt="Affiche Gismonda par Alphonse Mucha pour Sarah Bernhardt" artistique.</p>
+        </article>
+      </div>
+    </section>Sarah Bernhardt change tout"bernhardt">
+      <div clasEn décembre 1894, Mucha est encore loin de la célébrité qu’il connaîtra ensuite. L’actrice Sarah Bernhardt a besoin en urgence d’une affiche pour <em>Gismonda</em>. Mucha propose une composition inhabituellement haute et calme : Bernhardt y apparaît presque comme une sainte byzantine plutôt que comme une vedette de théâtre conventionnelle.rah Bernhardt change tout</h2>
+     Le succès de l’affiche est immédiat, car elle donne à Bernhardt une nouvelle image publique. Elle ne se contente pas d’annoncer une représentation : elle transforme l’actrice en icône. Cette réussite mène à une collaboration importante : Mucha conçoit des affiches, des supports liés à la scène et une véritable identité visuelle autour de la persona théâtrale de Bernhardt.utôt que comme une vedette de théâtrCet épisode montre pourquoi l’art de Mucha est plus complexe qu’une simple « jolie décoration ». Il comprend très tôt la célébrité, l’image de marque et le regard du public urbain, avant même que ces notions ne deviennent centrales dans la culture visuelle moderne.ion : elle transforme l’actrice en icône. Cette réus<em>Gismonda</em> donne à l’actrice une allure intemporelle et à l’affiche une noblesse nouvelle. C’est cette combinaison qui rend Mucha célèbre.table identité visuelle autour de la persona théâtrale de Bernhardt.
+        </p>
+        <p>
+          Cet épisode montre pourquoi l’art de Mucha est plus complexe qAu-delà de l’Art nouveauie décoration ». Il comprendMucha n’aimait pas être réduit à la surface élégante et à la mode de l’Art nouveau. Après son succès international à Paris et plusieurs séjours aux États-Unis, il se tourne vers un projet beaucoup plus ambitieux : <em>L’Épopée slave</em>, un cycle de vingt peintures monumentales consacré à l’histoire et aux mythes des peuples slaves.’est cette combinaison qui rend MuchLe projet est financé par le mécène américain Charles Richard Crane, que Mucha rencontre durant sa période américaine. Ce soutien lui permet de travailler à une échelle très différente de celle de l’affiche : non plus des images de rue, mais de vastes scènes historiques destinées à construire une mémoire collective.duit à la surface élégante et à la mCette œuvre tardive révèle une tension majeure dans la carrière de Mucha. Le monde retient surtout les affiches parisiennes élégantes, mais Mucha lui-même voulait être reconnu comme un peintre d’histoire sérieux, au service d’une cause culturelle et politique. Son art circule ainsi entre commerce, spiritualité, nationalisme et théâtre.  </p>
+        <p>
+          Le projet est financé par le mécène américain Charles Richard Crane, que Mucha rencontre durant sa période américaine. Ce soutien lui alt="L’Apothéose des Slaves, issue de L’Épopée slave, par Alphonse Mucha"he : non plus des images de rue, mais de vastes scènes historiques destinées à construire une mémoire collectUn style<br />à la logique cachée        Cette œuvre tardive Le style de Mucha est souvent imité parce qu’il paraît immédiatement reconnaissable : une figure féminine centrale, des cheveux ondoyants, des formes végétales, des couleurs pastel et un motif circulaire derrière la tête. Mais sa logique profonde est compositionnelle. L’image est construite pour retenir l’attention : les courbes guident le regard, les bordures stabilisent la scène, et les objets symboliques transforment un sujet commercial en allégorie.l-art">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mucha%20Apoteoza.jpg"  />
+      </div>
+    </section>
 
-        <tr>
-            <td>Lentille</td>
-            <td>Plateaux andins</td>
-            <td>Subsistance et sécurité alimentaire</td>
-        </tr>
+    <section class="gallery">
+      <div class="sectialt="Zodiac, 1897, par Alphonse Mucha"à la logique cachée</h2>
+        <p>
+          Le style de Mucha est souvent imité parce qu’il paraît imméLe cercle est l’un des outils les plus puissants de Mucha. Il suggère l’image sacrée, mais aussi le calendrier, la médaille, le miroir ou la vitrine. C’est cette ambiguïté qui donne à l’image une impression à la fois ancienne et moderne.e. L’image est construite pour retenir l’attention : les courbes guident le regard, les bordures stabilisent la scène, et les objets symboliques transforment un sujet commercial en allégorie.
+        </p>
+      </div>
 
-        <tr>
-            <td>Fève</td>
-            <td>Régions méditerranéennes</td>
-            <td>Autoconsommation paysanne</td>
-        </tr>
-    </table>
+      <div class="wall">
+ alt="Affiche publicitaire pour les cigarettes Job par Alphonse Mucha, 1896"tps://commons.wikimedia.org/wiki/Special:FilePath/18Le produit devient atmosphère 1897, by Alphonse Mucha" />
+       Dans les affiches <em>Job</em>, Mucha ne met pas vraiment l’objet vendu au centre. Il vend plutôt une atmosphère : langueur, élégance, sensualité et plaisir visuel.alendrier, la médaille, le miroir ou la vitrine. C’est cette ambiguïté qui donne à l’image une impression à la fois ancienne et moderne.
+       Art nouveau, affiches de théâtre, design symbolique et peinture historique slave.rd medium">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alphonse%20Mucha%20-%20Advertisment%20for%20Job%20cigarettes%2C%201896.jpg" alt="Advertisement for Job cigarettes by Alphonse Mucha, 1896" />
+          <div class="caption">
+            <      Dans les affiches <em>Job</em>, Mucha ne met pas vraiment l’objet vendu au centre. Il vend plutôt une atmosphère : langueur, élégance, sensualité et plaisir visuel.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-</section>
-
-<section>
-    <h2>III. Les légumineuses et les hiérarchies sociales</h2>
-
-    <h3>1. Une alimentation associée aux classes populaires</h3>
-
-    <p>
-        Au cours du XIXe siècle, les pratiques alimentaires deviennent progressivement un marqueur de distinction sociale. Les élites urbaines adoptent des régimes davantage centrés sur la viande, les produits importés et les aliments raffinés.
-    </p>
-
-    <p>
-        À l’inverse, les légumineuses restent fortement associées aux populations rurales et ouvrières. Cette opposition contribue à la construction d’une hiérarchie symbolique des aliments.
-    </p>
-
-    <p>
-        Les discours hygiénistes et médicaux participent parfois à cette stigmatisation en présentant les régimes pauvres en protéines animales comme un signe d’arriération sociale.
-    </p>
-
-    <h3>2. La persistance des traditions culinaires</h3>
-
-    <p>
-        Malgré cette hiérarchisation sociale, les légumineuses demeurent au cœur des traditions culinaires hispaniques. Les plats emblématiques comme le cocido madrilène, la fabada asturienne ou les frijoles mexicains participent à la construction d’identités régionales et nationales.
-    </p>
-
-    <p>
-        Les repas collectifs fondés sur ces préparations jouent également un rôle important dans les sociabilités rurales et les fêtes religieuses.
-    </p>
-
-</section>
-
-<section>
-    <h2>IV. Enjeux sanitaires et politiques</h2>
-
-    <h3>1. Les politiques alimentaires publiques</h3>
-
-    <p>
-        À partir de la fin du XIXe siècle, les gouvernements hispaniques commencent à accorder une attention croissante aux questions nutritionnelles. Les légumineuses sont fréquemment utilisées dans les écoles, les casernes et les institutions charitables en raison de leur faible coût et de leur valeur énergétique.
-    </p>
-
-    <h3>2. Les débats scientifiques</h3>
-
-    <p>
-        Les progrès des sciences nutritionnelles conduisent progressivement à une réévaluation des qualités alimentaires des légumineuses. Les médecins reconnaissent leur richesse en protéines végétales, en fibres et en minéraux.
-    </p>
-
-    <p>
-        Toutefois, certains discours médicaux continuent de souligner leur supposée difficulté de digestion, révélant les tensions entre savoir scientifique moderne et pratiques populaires traditionnelles.
-    </p>
-
-</section>
-
-<section>
-    <h2>Conclusion</h2>
-
-    <p>
-        Entre 1830 et 1930, les légumineuses jouent un rôle central dans les sociétés hispaniques. Elles soutiennent les équilibres alimentaires des classes populaires, structurent les économies rurales et participent à la construction des identités culturelles.
-    </p>
-
-    <p>
-        Leur étude révèle également les profondes inégalités sociales qui caractérisent le monde hispanique durant cette période. Alors que les élites urbaines s’orientent progressivement vers des modèles alimentaires industrialisés et carnés, les populations rurales demeurent fortement dépendantes des protéines végétales.
-    </p>
-
-    <p>
-        Les légumineuses apparaissent ainsi comme un objet historique majeur pour comprendre les interactions entre agriculture, alimentation, modernisation économique et hiérarchies sociales dans les sociétés espagnoles et latino-américaines du XIXe siècle.
-    </p>
-</section>
-
-</main>
-
-<footer>
-    <p>Document universitaire — Histoire économique et sociale des sociétés hispaniques</p>
-    <p class="small">Période étudiée : 1830-1930</p>
-</footer>
-
+  <footer>
+    <strong>Alphonse Mucha</strong>
+    Art nouveau, affiches de théâtre, design symbolique et peinture historique slave.
+  </footer>
 </body>
 </html>
