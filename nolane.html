@@ -9,161 +9,352 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Inter,sans-serif;
-    background:#f7f3ee;
-    color:#111;
+body {
+    font-family: Inter, sans-serif;
+    background: #f3eee4;
+    color: #354033;
 }
 
-.container{
-    width:min(1100px,90%);
-    margin:auto;
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
 }
 
-header{
-    text-align:center;
-    padding:80px 0 50px;
+/* EN-TÊTE */
+
+header {
+    padding: 60px 0 35px;
 }
 
-header h1{
-    font-size:clamp(4rem,9vw,7rem);
-    font-weight:900;
-    letter-spacing:-4px;
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #9ba98d;
+    padding-bottom: 15px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6f7f72;
 }
 
-header span{
-    color:#d97706;
+header h1 {
+    margin-top: 35px;
+    font-size: clamp(4.5rem, 13vw, 10rem);
+    font-weight: 900;
+    line-height: 0.78;
+    letter-spacing: -7px;
+    color: #6f8792;
 }
 
-header p{
-    max-width:600px;
-    margin:20px auto 0;
-    color:#666;
-    line-height:1.7;
+header h1 span {
+    display: block;
+    margin-left: 12vw;
+    color: #8d9b73;
 }
 
-.featured{
-    margin:40px 0 80px;
+.intro {
+    margin-top: 35px;
+    max-width: 720px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5f6158;
 }
 
-.featured img{
-    width:100%;
-    height:600px;
-    object-fit:cover;
+/* COMPOSITION PRINCIPALE */
+
+.poster {
+    margin: 55px 0 90px;
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 25px;
+    align-items: stretch;
 }
 
-.featured-text{
-    margin-top:25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:30px;
+.poster-image {
+    position: relative;
+    background: #cfc3ae;
+    padding: 20px;
 }
 
-.featured-text h2{
-    font-size:3rem;
-    line-height:1;
+.poster-image img {
+    width: 100%;
+    height: 610px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.02);
 }
 
-.featured-text p{
-    max-width:500px;
-    color:#555;
-    line-height:1.8;
+.poster-label {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background: #f3eee4;
+    color: #6f8792;
+    padding: 18px 24px;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-bottom:80px;
+.poster-side {
+    background: #dde0d2;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.work img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    transition:.3s;
+.poster-side h2 {
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #6f8792;
+    letter-spacing: -2px;
 }
 
-.work:hover img{
-    transform:scale(1.03);
+.poster-side p {
+    line-height: 1.8;
+    color: #565a50;
 }
 
-.work h3{
-    margin-top:10px;
-    font-size:1rem;
-    font-weight:600;
+.poster-side .number {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #b8b4c7;
 }
 
-@media(max-width:900px){
+/* BANDE CENTRALE */
 
-.gallery{
-    grid-template-columns:1fr;
+.strip {
+    margin-bottom: 90px;
+    padding: 28px 0;
+    border-top: 2px solid #9ba98d;
+    border-bottom: 2px solid #9ba98d;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    color: #6f7f72;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
-.featured-text{
-    flex-direction:column;
+/* ŒUVRES */
+
+.works {
+    margin-bottom: 80px;
 }
 
-.featured img{
-    height:400px;
+.work {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: center;
+    padding: 35px 0;
+    border-bottom: 1px solid #c8c1b3;
 }
 
+.work:nth-child(even) {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.work:nth-child(even) .work-text {
+    order: -1;
+}
+
+.work img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 80px 0 0;
+}
+
+.work:nth-child(even) img {
+    border-radius: 80px 0 0 0;
+}
+
+.work-text h3 {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #6f8792;
+    margin-bottom: 18px;
+}
+
+.work-text p {
+    color: #5f6158;
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+/* RETOUR */
+
+footer {
+    padding-bottom: 55px;
+}
+
+footer a {
+    color: #6f8792;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid #8d9b73;
+    padding-bottom: 5px;
+}
+
+footer a:hover {
+    color: #8d9b73;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+    .top-line,
+    .strip {
+        display: block;
+        line-height: 2;
+    }
+
+    header h1 {
+        letter-spacing: -4px;
+    }
+
+    header h1 span {
+        margin-left: 0;
+    }
+
+    .poster,
+    .work,
+    .work:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .work:nth-child(even) .work-text {
+        order: 0;
+    }
+
+    .poster-image img {
+        height: 420px;
+    }
+
+    .poster-label {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .work img {
+        height: 300px;
+        border-radius: 0;
+    }
+
+    .work:nth-child(even) img {
+        border-radius: 0;
+    }
 }
 
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
 <header>
+    <div class="top-line">
+        <p>Peintre français</p>
+        <p>1839 — 1906</p>
+    </div>
+
     <h1>PAUL <span>CÉZANNE</span></h1>
-    <p>
-        Figure majeure de l'art moderne, Cézanne a révolutionné la peinture
-        grâce à sa manière unique de représenter les formes et la couleur.
+
+    <p class="intro">
+        Paul Cézanne est une figure majeure de l’art moderne. Ses paysages,
+        ses portraits et ses natures mortes reposent sur une recherche de formes
+        solides, de couleurs posées par touches et d’équilibre dans la composition.
     </p>
 </header>
 
-<section class="featured">
+<section class="poster">
 
-    <img src="images/joueurs-cartes.jpg" alt="Les Joueurs de cartes">
+    <div class="poster-image">
+        <img src="images/sainte-victoire.jpg" alt="Montagne Sainte-Victoire">
+        <div class="poster-label">Montagne Sainte-Victoire</div>
+    </div>
 
-    <div class="featured-text">
-        <h2>Les Joueurs<br>de cartes</h2>
+    <div class="poster-side">
+        <div>
+            <h2>Formes simples,<br>paysage construit.</h2>
+        </div>
 
         <p>
-            Considérée comme son chef-d'œuvre, cette œuvre peinte vers 1890
-            est l'une des plus célèbres de l'histoire de l'art.
+            Cézanne peint plusieurs fois la montagne Sainte-Victoire, près
+            d’Aix-en-Provence. Ce motif lui permet de travailler les volumes,
+            les plans et les variations de couleur.
         </p>
+
+        <div class="number">01</div>
     </div>
 
 </section>
 
-<section class="gallery">
+<section class="strip">
+    <p>Bleus gris</p>
+    <p>Verts doux</p>
+    <p>Beiges pierre</p>
+    <p>Provence</p>
+</section>
+
+<section class="works">
 
     <div class="work">
-        <img src="images/sainte-victoire.jpg" alt="">
-        <h3>Montagne Sainte-Victoire</h3>
+        <img src="images/joueurs-cartes.jpg" alt="Les Joueurs de cartes">
+
+        <div class="work-text">
+            <h3>Les Joueurs de cartes</h3>
+            <p>
+                Cette œuvre représente une scène calme et concentrée. Les figures
+                sont simples, presque immobiles, et la composition paraît très stable.
+            </p>
+        </div>
     </div>
 
     <div class="work">
-        <img src="images/baigneuses.jpg" alt="">
-        <h3>Les Grandes Baigneuses</h3>
+        <img src="images/baigneuses.jpg" alt="Les Grandes Baigneuses">
+
+        <div class="work-text">
+            <h3>Les Grandes Baigneuses</h3>
+            <p>
+                Dans cette série, Cézanne travaille les corps comme des formes
+                intégrées au paysage. Les personnages et la nature semblent
+                appartenir à la même construction.
+            </p>
+        </div>
     </div>
 
     <div class="work">
-        <img src="images/pommes.jpg" alt="">
-        <h3>Nature morte aux pommes</h3>
+        <img src="images/pommes.jpg" alt="Nature morte aux pommes">
+
+        <div class="work-text">
+            <h3>Nature morte aux pommes</h3>
+            <p>
+                Ses natures mortes montrent son intérêt pour les objets simples :
+                pommes, nappes, paniers ou bouteilles deviennent des volumes à
+                organiser dans l’espace.
+            </p>
+        </div>
     </div>
 
 </section>
+
+<footer>
+    <a href="index.html">Retour à l’accueil</a>
+</footer>
 
 </div>
 
