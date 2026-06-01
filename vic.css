@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  background-color: #11100e;
+  color: #eee7da;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  border-bottom: 1px solid rgba(238, 231, 218, 0.25);
+}
+
+.date {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #c7a86b;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 95px;
+  line-height: 0.9;
+  font-weight: normal;
+  margin: 0;
+}
+
+.intro {
+  max-width: 520px;
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d7d0c2;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92);
+}
+
+.hero-image p {
+  position: absolute;
+  right: -25px;
+  bottom: 35px;
+  background-color: #c7a86b;
+  color: #11100e;
+  padding: 14px 22px;
+  font-size: 15px;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(238, 231, 218, 0.25);
+}
+
+.description h2 {
+  font-size: 42px;
+  font-weight: normal;
+  margin: 0;
+  color: #c7a86b;
+}
+
+.description p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d7d0c2;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 70px 0 50px;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9) saturate(0.9);
+}
+
+figure img:hover {
+  transform: translateY(-6px);
+  filter: brightness(1);
+}
+
+figcaption {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #cfc6b5;
+}
+
+footer {
+  padding: 35px 0 50px;
+}
+
+a {
+  color: #eee7da;
+  text-decoration: none;
+  border-bottom: 1px solid #eee7da;
+  padding-bottom: 4px;
+}
+
+a:hover {
+  color: #c7a86b;
+  border-color: #c7a86b;
+}
+
+@media screen and (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .hero-image img {
+    height: 460px;
+  }
+
+  .hero-image p {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .description {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  figure img {
+    height: 360px;
+  }
+}

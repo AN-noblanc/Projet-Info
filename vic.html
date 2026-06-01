@@ -1,199 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ma page simple</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Johannes Vermeer</title>
+    <link rel="stylesheet" href="./vic.css" />
+  </head>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #222;
-      overflow-x: hidden;
-      transition: background 0.5s;
-    }
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="date">1632 — 1675</p>
+          <h1>Johannes<br />Vermeer</h1>
+          <p class="intro">
+            Peintre néerlandais du XVIIe siècle, Vermeer est connu pour ses
+            scènes d’intérieur, sa lumière douce et ses compositions calmes.
+            Ses tableaux montrent souvent des gestes simples de la vie
+            quotidienne, transformés par une atmosphère silencieuse et précise.
+          </p>
+        </div>
 
-    body.mode-surprise {
-      background: radial-gradient(circle, #fff176, #f1277b, #7b2ff7, #000);
-      animation: fondMagique 2s infinite alternate;
-    }
+        <div class="hero-image">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje%20met%20de%20parel.jpg?width=1200"
+            alt="La Jeune Fille à la perle de Vermeer"
+          />
+          <p>La Jeune Fille à la perle</p>
+        </div>
+      </section>
 
-    header {
-      background-color: #f1277b;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      transition: transform 0.5s, box-shadow 0.5s;
-    }
+      <section class="description">
+        <h2>Un peintre de la lumière</h2>
+        <p>
+          Vermeer ne cherche pas à représenter des scènes spectaculaires. Il
+          donne plutôt de l’importance à des moments ordinaires : une femme qui
+          lit une lettre, une servante qui verse du lait, un musicien, une pièce
+          éclairée par une fenêtre. C’est cette simplicité qui rend ses tableaux
+          reconnaissables.
+        </p>
+      </section>
 
-    body.mode-surprise header {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px white;
-    }
+      <section class="gallery">
+        <figure>
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Het%20melkmeisje%20-%20Google%20Art%20Project.jpg?width=900"
+            alt="La Laitière de Vermeer"
+          />
+          <figcaption>La Laitière</figcaption>
+        </figure>
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
+        <figure>
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg?width=1100"
+            alt="Vue de Delft de Vermeer"
+          />
+          <figcaption>Vue de Delft</figcaption>
+        </figure>
 
-    h1 {
-      margin: 0;
-    }
+        <figure>
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20-%20The%20Art%20of%20Painting%20-%20Google%20Art%20Project.jpg?width=900"
+            alt="L'Art de la peinture de Vermeer"
+          />
+          <figcaption>L’Art de la peinture</figcaption>
+        </figure>
+      </section>
 
-    button {
-      background-color: #f1277b;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 18px;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-
-    button:hover {
-      background-color: #de91da;
-      transform: scale(1.08);
-    }
-
-    #message-surprise {
-      display: none;
-      margin-top: 30px;
-      font-size: 36px;
-      font-weight: bold;
-      color: #f1277b;
-      animation: apparition 0.8s ease-out, pulse 1s infinite alternate;
-    }
-
-    body.mode-surprise #message-surprise {
-      display: block;
-    }
-
-    .confetti {
-      position: fixed;
-      top: -20px;
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-      animation: tomber 3s linear forwards;
-      z-index: 10;
-    }
-
-    .etoile {
-      position: fixed;
-      font-size: 30px;
-      animation: voler 2s linear forwards;
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    @keyframes tomber {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
-    }
-
-    @keyframes voler {
-      0% {
-        transform: scale(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(2.5);
-        opacity: 0;
-      }
-    }
-
-    @keyframes apparition {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes pulse {
-      from {
-        transform: scale(1);
-      }
-      to {
-        transform: scale(1.12);
-      }
-    }
-
-    @keyframes fondMagique {
-      from {
-        filter: hue-rotate(0deg);
-      }
-      to {
-        filter: hue-rotate(90deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Une super page pour une super star</h1>
-    <p>Une page HTML dans la simplicité</p>
-  </header>
-
-  <main>
-    <button onclick="lancerSurprise()">Surprise !!</button>
-    <div id="message-surprise">✨ BOUM ! Tu es une star ✨</div>
-  </main>
-
-  <script>
-    function lancerSurprise() {
-      document.body.classList.add("mode-surprise");
-
-      const couleurs = ["#f1277b", "#fff176", "#7b2ff7", "#00e5ff", "#76ff03", "#ff9100"];
-      const emojis = ["✨", "💖", "🌟", "🎉", "👑", "🔥"];
-
-      for (let i = 0; i < 120; i++) {
-        const confetti = document.createElement("div");
-        confetti.className = "confetti";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.backgroundColor = couleurs[Math.floor(Math.random() * couleurs.length)];
-        confetti.style.animationDelay = Math.random() * 1.5 + "s";
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-          confetti.remove();
-        }, 4000);
-      }
-
-      for (let i = 0; i < 40; i++) {
-        const etoile = document.createElement("div");
-        etoile.className = "etoile";
-        etoile.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        etoile.style.left = Math.random() * 100 + "vw";
-        etoile.style.top = Math.random() * 100 + "vh";
-        etoile.style.animationDelay = Math.random() + "s";
-        document.body.appendChild(etoile);
-
-        setTimeout(() => {
-          etoile.remove();
-        }, 3000);
-      }
-    }
-  </script>
-</body>
+      <footer>
+        <a href="index.html">Retour à l’accueil</a>
+      </footer>
+    </main>
+  </body>
 </html>
