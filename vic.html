@@ -1,199 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ma page simple</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Johannes Vermeer</title>
+    <link
+      rel="stylesheet"
+      href="https://public.codepenassets.com/css/reset-2.0.min.css"
+    />
+    <link rel="stylesheet" href="./vic.css" />
+  </head>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #222;
-      overflow-x: hidden;
-      transition: background 0.5s;
-    }
+  <body>
+    <main class="page">
+      <section class="intro">
+        <p class="small">peinture hollandaise · XVIIe siècle</p>
+        <h1>Johannes<br />Vermeer</h1>
+        <p class="intro-text">
+          Vermeer peint des scènes simples, souvent silencieuses, dans des
+          intérieurs baignés de lumière. Ses tableaux donnent de l’importance
+          aux gestes ordinaires : lire une lettre, verser du lait, jouer de la
+          musique ou regarder par une fenêtre.
+        </p>
+      </section>
 
-    body.mode-surprise {
-      background: radial-gradient(circle, #fff176, #f1277b, #7b2ff7, #000);
-      animation: fondMagique 2s infinite alternate;
-    }
+      <section class="quote">
+        <p>lumière</p>
+        <p>silence</p>
+        <p>intérieur</p>
+      </section>
 
-    header {
-      background-color: #f1277b;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      transition: transform 0.5s, box-shadow 0.5s;
-    }
+      <figure class="card card-large">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje%20met%20de%20parel.jpg?width=1200"
+          alt="La Jeune Fille à la perle, Johannes Vermeer"
+        />
+        <figcaption>La Jeune Fille à la perle</figcaption>
+      </figure>
 
-    body.mode-surprise header {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px white;
-    }
+      <figure class="card card-tall">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Het%20melkmeisje%20-%20Google%20Art%20Project.jpg?width=1200"
+          alt="La Laitière, Johannes Vermeer"
+        />
+        <figcaption>La Laitière</figcaption>
+      </figure>
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
+      <section class="text-block">
+        <h2>Un peintre de l’instant calme</h2>
+        <p>
+          Dans ses œuvres, il n’y a presque jamais d’action spectaculaire.
+          L’intérêt vient plutôt de la lumière, des couleurs et de l’équilibre
+          de la composition.
+        </p>
+      </section>
 
-    h1 {
-      margin: 0;
-    }
+      <figure class="card">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg?width=1400"
+          alt="Vue de Delft, Johannes Vermeer"
+        />
+        <figcaption>Vue de Delft</figcaption>
+      </figure>
 
-    button {
-      background-color: #f1277b;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 18px;
-      transition: transform 0.2s, background-color 0.2s;
-    }
+      <figure class="card">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20-%20The%20Art%20of%20Painting%20-%20Google%20Art%20Project.jpg?width=1200"
+          alt="L'Art de la peinture, Johannes Vermeer"
+        />
+        <figcaption>L’Art de la peinture</figcaption>
+      </figure>
 
-    button:hover {
-      background-color: #de91da;
-      transform: scale(1.08);
-    }
+      <figure class="card">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20The%20Astronomer%20-%201668.jpg?width=1000"
+          alt="L'Astronome, Johannes Vermeer"
+        />
+        <figcaption>L’Astronome</figcaption>
+      </figure>
 
-    #message-surprise {
-      display: none;
-      margin-top: 30px;
-      font-size: 36px;
-      font-weight: bold;
-      color: #f1277b;
-      animation: apparition 0.8s ease-out, pulse 1s infinite alternate;
-    }
+      <figure class="card card-wide">
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Girl%20Reading%20a%20Letter%20by%20an%20Open%20Window%20-%20Google%20Art%20Project.jpg?width=1200"
+          alt="Jeune fille lisant une lettre, Johannes Vermeer"
+        />
+        <figcaption>Jeune fille lisant une lettre</figcaption>
+      </figure>
 
-    body.mode-surprise #message-surprise {
-      display: block;
-    }
-
-    .confetti {
-      position: fixed;
-      top: -20px;
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-      animation: tomber 3s linear forwards;
-      z-index: 10;
-    }
-
-    .etoile {
-      position: fixed;
-      font-size: 30px;
-      animation: voler 2s linear forwards;
-      z-index: 10;
-      pointer-events: none;
-    }
-
-    @keyframes tomber {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
-    }
-
-    @keyframes voler {
-      0% {
-        transform: scale(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(2.5);
-        opacity: 0;
-      }
-    }
-
-    @keyframes apparition {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes pulse {
-      from {
-        transform: scale(1);
-      }
-      to {
-        transform: scale(1.12);
-      }
-    }
-
-    @keyframes fondMagique {
-      from {
-        filter: hue-rotate(0deg);
-      }
-      to {
-        filter: hue-rotate(90deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Une super page pour une super star</h1>
-    <p>Une page HTML dans la simplicité</p>
-  </header>
-
-  <main>
-    <button onclick="lancerSurprise()">Surprise !!</button>
-    <div id="message-surprise">✨ BOUM ! Tu es une star ✨</div>
-  </main>
-
-  <script>
-    function lancerSurprise() {
-      document.body.classList.add("mode-surprise");
-
-      const couleurs = ["#f1277b", "#fff176", "#7b2ff7", "#00e5ff", "#76ff03", "#ff9100"];
-      const emojis = ["✨", "💖", "🌟", "🎉", "👑", "🔥"];
-
-      for (let i = 0; i < 120; i++) {
-        const confetti = document.createElement("div");
-        confetti.className = "confetti";
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.backgroundColor = couleurs[Math.floor(Math.random() * couleurs.length)];
-        confetti.style.animationDelay = Math.random() * 1.5 + "s";
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-          confetti.remove();
-        }, 4000);
-      }
-
-      for (let i = 0; i < 40; i++) {
-        const etoile = document.createElement("div");
-        etoile.className = "etoile";
-        etoile.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        etoile.style.left = Math.random() * 100 + "vw";
-        etoile.style.top = Math.random() * 100 + "vh";
-        etoile.style.animationDelay = Math.random() + "s";
-        document.body.appendChild(etoile);
-
-        setTimeout(() => {
-          etoile.remove();
-        }, 3000);
-      }
-    }
-  </script>
-</body>
+      <section class="footer-note">
+        <a href="index.html">Retour à l’accueil</a>
+      </section>
+    </main>
+  </body>
 </html>
