@@ -1,23 +1,194 @@
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+:root {
+  color: #222;
+  background: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  font-kerning: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #f7f7f7;
 }
 
 a {
-  color: #007bff;
+  color: inherit;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.08em;
+}
+
+.home {
+  min-height: 100svh;
+  position: relative;
+  padding: 44px 17px 22px;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+
+.site-header {
+  display: grid;
+  justify-items: start;
+  gap: 5px;
+  padding-left: 7px;
+}
+
+.mark {
+  font-size: 15px;
+  line-height: 0.98;
+  font-weight: 400;
   text-decoration: none;
 }
-.header {
-  background-color: #f8f8f8;
-  padding: 20px;
-  text-align: center;
-  font-family: "Bricolage Grotesque", sans-serif;
+
+.mark sup {
+  top: -0.45em;
+  position: relative;
+  font-size: 0.47em;
+  font-weight: 400;
 }
-.container {
+
+.page-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 40px auto;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  font-size: 18px;
+  line-height: 0.98;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.page-nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+.page-nav a::after {
+  content: ",";
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
+  text-decoration-line: underline;
+}
+
+.image-carousel {
+  width: calc(100% + 34px);
+  margin: 28px -17px 0;
+  overflow: hidden;
+}
+
+.carousel-track {
+  --slide-gap: 10px;
+  --slide-width: 154px;
+  --slide-height: 201px;
+
+  display: flex;
+  align-items: stretch;
+  gap: var(--slide-gap);
+  width: max-content;
+  animation: museum-scroll 70s linear infinite;
+  will-change: transform;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-track img {
+  width: var(--slide-width);
+  height: var(--slide-height);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(0.97) contrast(0.98);
+}
+
+.museum-title {
+  align-self: start;
+  margin: 122px 0 0 -17px;
+  color: #242424;
+  font-family: "Zalando Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17vw;
+  line-height: 0.74;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 0.93;
+  font-weight: 700;
+}
+
+.home-footer p {
+  width: min(260px, 58vw);
+  margin: 0;
+}
+
+.home-footer time {
+  padding-right: 17px;
+  white-space: nowrap;
+}
+
+@keyframes museum-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-10 * (var(--slide-width) + var(--slide-gap))));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    padding-top: 28px;
+  }
+
+  .image-carousel {
+    margin-top: 22px;
+  }
+
+  .museum-title {
+    margin-top: 86px;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 8px;
+  }
+
+  .home-footer p {
+    width: min(260px, 100%);
+  }
+
+  .home-footer time {
+    padding-right: 0;
+  }
 }
