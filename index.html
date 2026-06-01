@@ -3,56 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acceuil</title>
+    <title>CentralMuseum</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist+Mono:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="header">
-      <h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-asterisk-icon lucide-asterisk"
+    <main class="home" aria-label="Accueil CentralMuseum">
+      <header class="site-header">
+        <a class="mark" href="index.html" aria-label="CentralMuseum accueil"
+          >Bienvenue.</a
         >
-          <path d="M12 6v12" />
-          <path d="M17.196 9 6.804 15" />
-          <path d="m6.804 9 10.392 6" /></svg
-        >Bienvenue sur notre site<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-asterisk-icon lucide-asterisk"
-        >
-          <path d="M12 6v12" />
-          <path d="M17.196 9 6.804 15" />
-          <path d="m6.804 9 10.392 6" />
-        </svg>
-      </h1>
-    </div>
-    <div class="container">
-      <a href="nolane.html">Nolane</a>
-      <a href="vic.html">Victoria</a>
-      <a href="pl.html">Pierre-Louis</a>
-      <a href="AN.html">Anabelle</a>
-    </div>
+        <nav class="page-nav" aria-label="Nos pages respectives">
+          <a href="nolane.html">Nolane</a>
+          <a href="vic.html">Victoria</a>
+          <a href="pl.html">Pierre-Louis</a>
+          <a href="AN.html">Anabelle</a>
+        </nav>
+      </header>
+
+      <section class="image-carousel" aria-label="Oeuvres des artistes presentes">
+        <div class="carousel-track">
+          <img
+            src="./assets/monet/water-lilies-setting-sun.webp"
+            alt="Claude Monet, The Water Lilies - Setting Sun"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje%20met%20de%20parel.jpg?width=900"
+            alt="Johannes Vermeer, La Jeune Fille a la perle"
+          />
+          <img
+            src="./assets/monet/impression-soleil-levant.webp"
+            alt="Claude Monet, Impression soleil levant"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Het%20melkmeisje%20-%20Google%20Art%20Project.jpg?width=900"
+            alt="Johannes Vermeer, La Laitiere"
+          />
+          <img
+            src="./assets/monet/woman-with-parasol.webp"
+            alt="Claude Monet, Woman with a Parasol"
+          />
+          <img
+            src="./assets/monet/japanese-footbridge.webp"
+            alt="Claude Monet, The Japanese Footbridge"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg?width=1000"
+            alt="Johannes Vermeer, Vue de Delft"
+          />
+          <img
+            src="./assets/monet/poppy-field.webp"
+            alt="Claude Monet, Poppy Field"
+          />
+          <img
+            src="./assets/monet/rouen-cathedral-sunlight.webp"
+            alt="Claude Monet, Rouen Cathedral"
+          />
+          <img
+            src="./assets/monet/houses-of-parliament.webp"
+            alt="Claude Monet, Houses of Parliament"
+          />
+          <img
+            src="./assets/monet/water-lilies-setting-sun.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Meisje%20met%20de%20parel.jpg?width=900"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/impression-soleil-levant.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Het%20melkmeisje%20-%20Google%20Art%20Project.jpg?width=900"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/woman-with-parasol.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/japanese-footbridge.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg?width=1000"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/poppy-field.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/rouen-cathedral-sunlight.webp"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            src="./assets/monet/houses-of-parliament.webp"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </section>
+
+      <h1 class="museum-title">CentralMuseum</h1>
+
+      <footer class="home-footer">
+        <p>
+          A student museum focused on artists, paintings, light, color, and
+          visual stories.
+        </p>
+        <time datetime="2026-06-01">01.06.2026</time>
+      </footer>
+    </main>
+    <script>
+      const title = document.querySelector(".museum-title");
+      let titleFitFrame;
+
+      const fitMuseumTitle = () => {
+        cancelAnimationFrame(titleFitFrame);
+
+        titleFitFrame = requestAnimationFrame(() => {
+          title.style.fontSize = "100px";
+          const range = document.createRange();
+          range.selectNodeContents(title);
+          const titleWidth = range.getBoundingClientRect().width;
+          range.detach();
+
+          if (titleWidth > 0) {
+            title.style.fontSize = `${
+              (document.documentElement.clientWidth / titleWidth) * 100
+            }px`;
+          }
+        });
+      };
+
+      window.addEventListener("resize", fitMuseumTitle);
+      fitMuseumTitle();
+
+      if (document.fonts) {
+        document.fonts.ready.then(fitMuseumTitle);
+      }
+    </script>
   </body>
 </html>
