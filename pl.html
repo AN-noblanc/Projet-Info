@@ -2,103 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Experiment 2: CSS Grid + Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pierre-Louis - Monet Study</title>
     <link
-      rel="stylesheet"
-      href="https://public.codepenassets.com/css/reset-2.0.min.css"
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3C/svg%3E"
     />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="./pl.css" />
   </head>
 
   <body>
-    <body>
-      <main>
-        <header>
-          <h1>Pierre-Louis<br />Art Direction &<br />Photography</h1>
-        </header>
-        <p>
-          Claude Monet (1840-1926) est un peintre francais, figure centrale de
-          l'impressionnisme. Il cherche moins a decrire les formes qu'a saisir
-          la lumiere, l'air et les variations d'un meme motif. De la Seine aux
-          meules, des cathedrales aux nympheas de Giverny, son oeuvre transforme
-          le paysage en experience de couleur et de perception.
-        </p>
-        <h1 class="title1">it</h1>
-        <div class="title2 sit_baseline"><h1>is</h1></div>
-        <h1 class="title3">what</h1>
-        <h1 class="title4">it</h1>
-        <div class="title5 sit_baseline"><h1>is</h1></div>
-        <figure class="painting img1">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Water%20Lilies%20-%20Setting%20Sun%20-%20Google%20Art%20Project.jpg?width=1800"
-            alt="Claude Monet, The Water Lilies - Setting Sun"
-          />
-          <figcaption>The Water Lilies - Setting Sun</figcaption>
-        </figure>
-        <figure class="painting img2">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20Impression%2C%20soleil%20levant.jpg?width=1000"
-            alt="Claude Monet, Impression, soleil levant"
-          />
-          <figcaption>Impression, soleil levant</figcaption>
-        </figure>
-        <figure class="painting img3">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_011.jpg?width=1200"
-            alt="Claude Monet, Woman with a Parasol"
-          />
-          <figcaption>Woman with a Parasol</figcaption>
-        </figure>
-        <figure class="painting img4">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20The%20Japanese%20Footbridge%2C%201899%2C%20NGA%2074796.jpg?width=1200"
-            alt="Claude Monet, The Japanese Footbridge"
-          />
-          <figcaption>The Japanese Footbridge</figcaption>
-        </figure>
-        <figure class="painting img5">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Poppy%20Field%20-%20Google%20Art%20Project.jpg?width=1000"
-            alt="Claude Monet, Poppy Field"
-          />
-          <figcaption>Poppy Field</figcaption>
-        </figure>
-        <figure class="painting img6">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Jardin%20%C3%A0%20Sainte-Adresse.jpg?width=1400"
-            alt="Claude Monet, Jardin à Sainte-Adresse"
-          />
-          <figcaption>Jardin à Sainte-Adresse</figcaption>
-        </figure>
-        <figure class="painting img7">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Rouen%20Cathedral%2C%20West%20Fa%C3%A7ade%2C%20Sunlight%20-%20Google%20Art%20Project.jpg?width=1400"
-            alt="Claude Monet, Rouen Cathedral, West Facade, Sunlight"
-          />
-          <figcaption>Rouen Cathedral, West Facade, Sunlight</figcaption>
-        </figure>
-        <figure class="painting img8">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20Houses%20of%20Parliament.jpg?width=900"
-            alt="Claude Monet, Houses of Parliament"
-          />
-          <figcaption>Houses of Parliament</figcaption>
-        </figure>
-        <figure class="painting img9">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Cliff%20Walk%20at%20Pourville%20-%20Google%20Art%20Project.jpg?width=1000"
-            alt="Claude Monet, Cliff Walk at Pourville"
-          />
-          <figcaption>Cliff Walk at Pourville</figcaption>
-        </figure>
-        <figure class="painting img10">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Haystacks%2C%20end%20of%20Summer%20-%20Google%20Art%20Project.jpg?width=1000"
-            alt="Claude Monet, Haystacks, end of Summer"
-          />
-          <figcaption>Haystacks, end of Summer</figcaption>
-        </figure>
-      </main>
-    </body>
+    <main>
+      <header>
+        <h1>Pierre-Louis<br />Art Direction &<br />Photography</h1>
+      </header>
+      <p>
+        Claude Monet (1840-1926) est un peintre francais, figure centrale de
+        l'impressionnisme. Il cherche moins a decrire les formes qu'a saisir
+        la lumiere, l'air et les variations d'un meme motif. De la Seine aux
+        meules, des cathedrales aux nympheas de Giverny, son oeuvre transforme
+        le paysage en experience de couleur et de perception.
+      </p>
+      <h1 class="title1">it</h1>
+      <div class="title2 sit_baseline"><h1>is</h1></div>
+      <h1 class="title3">what</h1>
+      <h1 class="title4">it</h1>
+      <div class="title5 sit_baseline"><h1>is</h1></div>
+      <figure class="painting img1">
+        <img
+          src="./assets/monet/water-lilies-setting-sun.webp"
+          alt="Claude Monet, The Water Lilies - Setting Sun"
+          width="1400"
+          height="464"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <figcaption>The Water Lilies - Setting Sun</figcaption>
+      </figure>
+      <figure class="painting img2">
+        <img
+          src="./assets/monet/impression-soleil-levant.webp"
+          alt="Claude Monet, Impression, soleil levant"
+          width="1280"
+          height="996"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Impression, soleil levant</figcaption>
+      </figure>
+      <figure class="painting img3">
+        <img
+          src="./assets/monet/woman-with-parasol.webp"
+          alt="Claude Monet, Woman with a Parasol"
+          width="1127"
+          height="1400"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Woman with a Parasol</figcaption>
+      </figure>
+      <figure class="painting img4">
+        <img
+          src="./assets/monet/japanese-footbridge.webp"
+          alt="Claude Monet, The Japanese Footbridge"
+          width="1400"
+          height="1129"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>The Japanese Footbridge</figcaption>
+      </figure>
+      <figure class="painting img5">
+        <img
+          src="./assets/monet/poppy-field.webp"
+          alt="Claude Monet, Poppy Field"
+          width="1280"
+          height="976"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Poppy Field</figcaption>
+      </figure>
+      <figure class="painting img6">
+        <img
+          src="./assets/monet/jardin-sainte-adresse.webp"
+          alt="Claude Monet, Jardin à Sainte-Adresse"
+          width="1400"
+          height="1049"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Jardin à Sainte-Adresse</figcaption>
+      </figure>
+      <figure class="painting img7">
+        <img
+          src="./assets/monet/rouen-cathedral-sunlight.webp"
+          alt="Claude Monet, Rouen Cathedral, West Facade, Sunlight"
+          width="910"
+          height="1400"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Rouen Cathedral, West Facade, Sunlight</figcaption>
+      </figure>
+      <figure class="painting img8">
+        <img
+          src="./assets/monet/houses-of-parliament.webp"
+          alt="Claude Monet, Houses of Parliament"
+          width="1280"
+          height="1125"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Houses of Parliament</figcaption>
+      </figure>
+      <figure class="painting img9">
+        <img
+          src="./assets/monet/cliff-walk-pourville.webp"
+          alt="Claude Monet, Cliff Walk at Pourville"
+          width="1280"
+          height="1026"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Cliff Walk at Pourville</figcaption>
+      </figure>
+      <figure class="painting img10">
+        <img
+          src="./assets/monet/haystacks-end-summer.webp"
+          alt="Claude Monet, Haystacks, end of Summer"
+          width="1280"
+          height="753"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Haystacks, end of Summer</figcaption>
+      </figure>
+    </main>
+    <script>
+      document.querySelectorAll(".painting img").forEach((image) => {
+        const reveal = () => image.closest(".painting").classList.add("is-loaded");
+
+        if (image.complete && image.naturalWidth > 0) {
+          reveal();
+          return;
+        }
+
+        image.addEventListener("load", reveal, { once: true });
+      });
+    </script>
   </body>
 </html>
