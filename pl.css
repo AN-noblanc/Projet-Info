@@ -52,7 +52,7 @@ body {
 main {
   --cell: calc((100vw - 9rem) / 6);
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: max-content repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(9, max-content);
   grid-gap: 1rem 1rem;
   font-family: helvetica, arial, sans-serif;
@@ -247,8 +247,6 @@ header {
 .title4 {
   grid-area: 6 / 1 / 8 / 2;
   width: max-content;
-  margin-left: -2rem;
-  letter-spacing: -0.1em;
   white-space: nowrap;
 }
 
@@ -297,11 +295,6 @@ address {
   main {
     --cell: calc((100vw - 8rem) / 5);
     grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .title4 {
-    margin-left: 0;
-    letter-spacing: 0;
   }
 
   header {
