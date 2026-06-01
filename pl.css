@@ -22,10 +22,37 @@ body {
   color: #111;
 }
 
+.home-button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid currentColor;
+  background: rgb(244 241 234 / 0.86);
+  color: #111;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+  background: #111;
+  color: #f4f1ea;
+}
+
 main {
   --cell: calc((100vw - 9rem) / 6);
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: max-content repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(9, max-content);
   grid-gap: 1rem 1rem;
   font-family: helvetica, arial, sans-serif;
@@ -181,6 +208,13 @@ header {
 .title2 {
   grid-area: 2 / 4 / 3 / 5;
   align-self: end;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title2 h1 {
+  line-height: 0.78;
+  white-space: nowrap;
 }
 
 .img2 {
@@ -212,6 +246,8 @@ header {
 
 .title4 {
   grid-area: 6 / 1 / 8 / 2;
+  width: max-content;
+  white-space: nowrap;
 }
 
 .img7 {
@@ -239,8 +275,14 @@ p {
 }
 
 .title5 {
-  grid-area: 8 / 4 / 9 / 5;
+  grid-area: 8 / 4 / 9 / -1;
   align-self: end;
+  min-width: 0;
+}
+
+.title5 h1 {
+  white-space: nowrap;
+  text-align: left;
 }
 
 address {
@@ -252,8 +294,9 @@ address {
 @media (max-width: 1080px) {
   main {
     --cell: calc((100vw - 8rem) / 5);
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+
   header {
     grid-area: 1/ 4 / 2 / 6;
   }
@@ -299,7 +342,7 @@ address {
   main p {
     columns: 3;
     column-gap: 8px;
-    grid-area: 9 / 1 / 10 / 7;
+    grid-area: 9 / 1 / 10 / -1;
   }
   address,
   main p {

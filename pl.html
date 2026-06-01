@@ -15,22 +15,23 @@
   </head>
 
   <body>
+    <a class="home-button" href="./index.html">Acceuil</a>
     <main>
       <header>
-        <h1>Pierre-Louis<br />Art Direction &<br />Photography</h1>
+        <h1>Claude Monet,<br />Impressioniste<br />d'exception</h1>
       </header>
       <p>
         Claude Monet (1840-1926) est un peintre francais, figure centrale de
-        l'impressionnisme. Il cherche moins a decrire les formes qu'a saisir
-        la lumiere, l'air et les variations d'un meme motif. De la Seine aux
+        l'impressionnisme. Il cherche moins a decrire les formes qu'a saisir la
+        lumiere, l'air et les variations d'un meme motif. De la Seine aux
         meules, des cathedrales aux nympheas de Giverny, son oeuvre transforme
         le paysage en experience de couleur et de perception.
       </p>
       <h1 class="title1">it</h1>
       <div class="title2 sit_baseline"><h1>is</h1></div>
-      <h1 class="title3">what</h1>
-      <h1 class="title4">it</h1>
-      <div class="title5 sit_baseline"><h1>is</h1></div>
+      <h1 class="title3">Monet</h1>
+      <h1 class="title4">we</h1>
+      <div class="title5 sit_baseline"><h1>love</h1></div>
       <figure class="painting img1">
         <img
           src="./assets/monet/water-lilies-setting-sun.webp"
@@ -145,7 +146,8 @@
     </main>
     <script>
       document.querySelectorAll(".painting img").forEach((image) => {
-        const reveal = () => image.closest(".painting").classList.add("is-loaded");
+        const reveal = () =>
+          image.closest(".painting").classList.add("is-loaded");
 
         if (image.complete && image.naturalWidth > 0) {
           reveal();
